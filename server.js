@@ -13,7 +13,7 @@ app.get('/about', middleware.requireAuthentication, function (req, res){
 	res.send('About page');
 });
 
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + '/public'));
 //console.log(__dirname);
